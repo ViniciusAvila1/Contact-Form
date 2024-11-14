@@ -1,38 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Contato</title>
-</head>
-<body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const textarea = document.querySelector("textarea");
+
+        function heightAdjust() {
+          textarea.style.height = "auto";
+
+          textarea.style.height = textarea.scrollHeight + "px";
+        }
+
+        // Ajusta a altura ao digitar
+        textarea.addEventListener("input", heightAdjust);
+
+        ajustarAltura();
+      });
+    </script>
+  </head>
+  <body>
     <div class="container">
-        <form id="contact" action="" method="post">
-            <h3>Formulário para Contato</h3>
-            <fieldset>
-                <input placeholder="Seu nome" type="text" tabindex="1" required autofocus>
-            </fieldset>
-            <fieldset>
-                <input placeholder="Seu email" type="email" tabindex="2" required>
-            </fieldset>
-            <fieldset>
-                <input placeholder="Seu telefone" type="tel" tabindex="3" required>
-            </fieldset>
-            <fieldset>
-                <input placeholder="Seu site (opcional)" type="url" tabindex="4" required>
-            </fieldset>
-            <fieldset>
-                <textarea style="resize: none;" placeholder="Digite sua mensagem aqui..." type="text" tabindex="5" required>
-                </textarea>
-            </fieldset>
-            <fieldset>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Cadastrar</button>
-            </fieldset>
-            <fieldset>
-                <p class="copyright">Produzido por <a href="mailto:viniciusvaln10@hotmail.com">Vinícius Vicente Ávila Lima</a></p>
-            </fieldset>
-        </form>
+      <form id="contact" action="" method="post">
+        <h3>Formulário para Contato</h3>
+        <fieldset>
+          <input
+            placeholder="Seu nome"
+            type="text"
+            tabindex="1"
+            required
+            autofocus
+          />
+        </fieldset>
+        <fieldset>
+          <input placeholder="Seu email" type="email" tabindex="2" required />
+        </fieldset>
+        <fieldset>
+          <input placeholder="Seu telefone" type="tel" tabindex="3" required />
+        </fieldset>
+        <fieldset>
+          <textarea
+            style="resize: none"
+            placeholder="Digite sua mensagem aqui..."
+            type="text"
+            tabindex="4"
+            required
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <button
+            name="submit"
+            type="submit"
+            id="contact-submit"
+            data-submit="...Sending"
+          >
+            Cadastrar
+          </button>
+        </fieldset>
+        <fieldset>
+          <p class="copyright">
+            Produzido por
+            <a href="mailto:viniciusvaln10@hotmail.com"
+              >Vinícius Vicente Ávila Lima</a
+            >
+          </p>
+        </fieldset>
+      </form>
     </div>
-</body>
+  </body>
 </html>
